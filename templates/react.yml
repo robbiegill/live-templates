@@ -1,0 +1,87 @@
+name: rdg-react
+contexts:
+  - JAVA_SCRIPT
+  - JS_EXPRESSION
+  - JSX_HTML
+  - JS_STATEMENT
+templates:
+  rcc:
+    description: React.createClass
+    template: |-
+      React.createClass({
+        render() {
+          return (
+            $END$
+          );
+        }
+      });
+
+  rpts:
+    description: propTypes block
+    template: |-
+      propTypes: {
+        $START$: React.PropTypes.$END$
+      },
+
+  rpt:
+    description: propTypes validation
+    template: |-
+      $START$: React.PropTypes.$END$
+
+  gis:
+    description: getInitialState
+    template: |-
+      getInitialState() {
+        return {
+          $END$
+        };
+      },
+
+  cwm:
+    description: componentWillMount
+    template: |-
+      componentWillMount() {
+        $END$
+      },
+
+  cdm:
+    description: componentDidMount
+    template: |-
+      componentDidMount() {
+        $END$
+      },
+
+  cwrp:
+    description: componentWillReceiveProps
+    template: |-
+      componentWillReceiveProps(nextProps) {
+        $END$
+      },
+
+  scu:
+    description: shouldComponentUpdate
+    template: |-
+      shouldComponentUpdate(nextProps, nextState) {
+        $END$
+      },
+
+  cwu:
+    description: componentWillUpdate
+    template: |-
+      componentWillUpdate(nextProps, nextState) {
+        $END$
+      },
+
+  cdu:
+    description: componentDidUpdate
+    template: |-
+      componentDidUpdate(prevProps, prevState) {
+        $END$
+      },
+
+  cwum:
+    description: componentWillUnmount
+    template: |-
+      componentWillUnmount() {
+        $END$
+      },
