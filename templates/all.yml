@@ -1,0 +1,24 @@
+name: rdg-all
+contexts:
+  - RUBY
+  - JSON
+  - CoffeeScript
+  - OTHER
+  - JAVA_SCRIPT
+  - JS_EXPRESSION
+  - JSX_HTML
+  - JS_STATEMENT
+
+templates:
+  hr:
+    description: hash rocket
+    template: '=> '
+    additional_attributes:
+      shortcut: SPACE
+      toReformat: 'false'
+  dr:
+    description: dash rocket
+    template: '-> '
+    additional_attributes:
+      shortcut: SPACE
+      toReformat: 'false'

@@ -1,0 +1,43 @@
+name: rdg-ruby
+contexts:
+  - RUBY
+
+templates:
+  bef:
+    description: rspec before
+    template: |-
+      before { $END$ }
+
+  cont:
+    description: rspec context
+    template: |-
+      context '$CONTEXT$' do
+        $END$
+      end
+
+  desc:
+    description: rspec describe
+    template: |-
+      describe '$CONTEXT$' do
+        $END$
+      end
+
+  it:
+    description: rspec it
+    template: |-
+      it '$IT$' do
+        $END$
+      end
+
+  let:
+    description: rspec let
+    template: |-
+      let(:$SOMETHING$) { $SOMETHING_ELSE$ }
+      $END$
+    additional_attributes:
+      shortcut: SPACE
+
+  exp:
+    description: rspec expect().to
+    template: |-
+      expect($CURSOR$).to $END$

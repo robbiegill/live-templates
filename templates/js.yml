@@ -1,0 +1,71 @@
+name: rdg-js
+contexts:
+  - JAVA_SCRIPT
+  - JS_EXPRESSION
+  - JSX_HTML
+  - JS_STATEMENT
+
+templates:
+  sef:
+    description: self-executing-function
+    template: |-
+      (() => {
+        $END$
+      })();
+
+  fn:
+    description: a function
+    template: |-
+      function($ARGS$) {
+        $END$
+      };
+
+  clog:
+    description: console log you can find
+    template: |-
+      console.error('---------->', $END$)
+
+  dbg:
+    description: debugger
+    template: |-
+      debugger
+
+  bef:
+    description: beforeEach
+    template: |-
+      beforeEach(function() {
+        $END$
+      });
+
+  aft:
+    description: afterEach
+    template: |-
+      afterEach(function() {
+        $END$
+      });
+
+  desc:
+    description: describe
+    template: |-
+      describe('$DESC$', function() {
+        $END$
+      });
+
+  cont:
+    description: context
+    template: |-
+      context('$CONT$', function() {
+        $END$
+      });
+
+  exp:
+    description: expect
+    template: |-
+      expect($ACTUAL$).to$END$
+
+  it:
+    description: it block
+    template: |-
+      it('$ASSERT_SOMETHING$', function() {
+        $END$
+      });

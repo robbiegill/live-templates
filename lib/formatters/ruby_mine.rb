@@ -21,14 +21,14 @@ module Formatters
         end
       end
 
-      puts builder.to_xml
+      builder.to_xml
     end
 
     class LiveTemplateGroup
       attr_reader :data
 
-      def initialize(file_name)
-        @data = YAML.load_file File.join('templates', "#{file_name}.yml")
+      def initialize(file)
+        @data = YAML.load_file file
       end
 
       def name
@@ -58,7 +58,7 @@ module Formatters
             description: description,
             toReformat: 'true',
             toShortenFQNames: 'true'
-          }
+          }.merge(additional_attributes)
         end
 
         def variables
@@ -73,6 +73,10 @@ module Formatters
 
         def value
           data['template']
+        end
+
+        def additional_attributes
+          data['additional_attributes'] || {}
         end
       end
     end
