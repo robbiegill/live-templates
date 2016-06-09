@@ -62,7 +62,7 @@ module Formatters
         end
 
         def variables
-          value.scan(/\$\S*\$/).map{ |m| m.tr '$', '' }.each do |var|
+          value.scan(/\$\S*?\$/).map{ |m| m.tr '$', '' }.each do |var|
             yield var unless var == 'END'
           end
         end
