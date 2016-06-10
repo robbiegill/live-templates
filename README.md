@@ -4,5 +4,5 @@
 ruby -Ilib -e "require 'generator'; Generator.dump_all!"
 
 #adjust for your RM location/version
-cp out/*.xml /Users/<you>/Library/Preferences/RubyMine80/templates/
+cp out/*.xml /Users/<you>/Library/Preferences/RubyMine<version>/templates/
 ```
