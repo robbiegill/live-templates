@@ -25,6 +25,11 @@ templates:
     template: |-
       console.error('---------->', $END$)
 
+  jstr:
+    description: JSON.stringify
+    template: |-
+      JSON.stringify($OBJ$, null, 2)
+
   dbg:
     description: debugger
     template: |-
