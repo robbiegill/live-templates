@@ -5,6 +5,23 @@ contexts:
   - JSX_HTML
   - JS_STATEMENT
 templates:
+  rec:
+    description: class extends React.Component
+    template: |-
+      class $CLASS_NAME$ extends React.Component {
+        static propTypes = {
+
+        };
+
+        render() {
+          return (
+            <div>
+              $END$
+            </div>
+          );
+        }
+      }
+
   rcc:
     description: React.createClass
     template: |-
@@ -35,53 +52,73 @@ templates:
         return {
           $END$
         };
-      },
+      }
 
   cwm:
     description: componentWillMount
     template: |-
       componentWillMount() {
         $END$
-      },
+      }
 
   cdm:
     description: componentDidMount
     template: |-
       componentDidMount() {
         $END$
-      },
+      }
 
   cwrp:
     description: componentWillReceiveProps
     template: |-
       componentWillReceiveProps(nextProps) {
         $END$
-      },
+      }
 
   scu:
     description: shouldComponentUpdate
     template: |-
       shouldComponentUpdate(nextProps, nextState) {
         $END$
-      },
+      }
 
   cwu:
     description: componentWillUpdate
     template: |-
       componentWillUpdate(nextProps, nextState) {
         $END$
-      },
+      }
 
   cdu:
     description: componentDidUpdate
     template: |-
       componentDidUpdate(prevProps, prevState) {
         $END$
-      },
+      }
 
   cwum:
     description: componentWillUnmount
     template: |-
       componentWillUnmount() {
         $END$
-      },
+      }
+
+  impx:
+    description: import X
+    template: import $NAME$ from '$END';
+
+  impr:
+    description: import React
+    template: import React from 'react';
+
+  impi:
+    description: import Immutable
+    template: import Immutable from 'immutable';
+
+  imppt:
+    description: import ImmutablePropTypes
+    template: import ImmutablePropTypes from 'react-immutable-proptypes';
+
+  impe:
+    description: import enzyme
+    template: import { mount } from 'enzyme';
