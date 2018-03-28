@@ -38,28 +38,28 @@ templates:
   bef:
     description: beforeEach
     template: |-
-      beforeEach(function() {
+      beforeEach(() => {
         $END$
       });
 
   aft:
     description: afterEach
     template: |-
-      afterEach(function() {
+      afterEach(() => {
         $END$
       });
 
   desc:
     description: describe
     template: |-
-      describe('$DESC$', function() {
+      describe('$DESC$', () => {
         $END$
       });
 
   cont:
     description: context
     template: |-
-      context('$CONT$', function() {
+      context('$CONT$', () => {
         $END$
       });
 
@@ -71,6 +71,6 @@ templates:
   it:
     description: it block
     template: |-
-      it('$ASSERT_SOMETHING$', function() {
+      it('$ASSERT_SOMETHING$', () => {
         $END$
       });
